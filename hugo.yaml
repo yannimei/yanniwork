@@ -1,0 +1,225 @@
+baseURL: "https://yannimei.github.io/yanniwork/"
+languageCode: "en-us"
+title: "Yanni Mei"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog
+      url: /blogs
+      weight: 1
+
+params:
+  title: "Yanni Mei"
+  description: "HCI Researcher | MS Student | Seeking Research Internship"
+  favicon: "/images/favicon.png"
+
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    defaultTheme: "light"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Yanni Mei"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Yanni Mei."
+    subtitle: "I study how people interact with technology"
+    content: "A Human-Computer Interaction researcher passionate about designing and evaluating intelligent, accessible, and inclusive interfaces. I combine user studies, prototyping, and data analysis to make technology work better for people."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "/resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/yannimei
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/yannimei
+        - icon: fa fa-envelope
+          url: mailto:yannimei951225@gmail.com
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I am a researcher in **Human-Computer Interaction** with a focus on user experience, accessibility, and human-AI interaction. My work sits at the intersection of cognitive science, design, and technology — I care deeply about building systems that are not just functional, but genuinely usable and equitable.
+
+      I am actively seeking **research internship opportunities** in HCI, UX Research, or related areas for 2025.
+    skills:
+      enable: true
+      title: "Methods & Tools:"
+      items:
+        - "User Research"
+        - "Usability Studies"
+        - "Prototyping (Figma)"
+        - "Statistical Analysis (R, Python)"
+        - "Qualitative Coding"
+        - "A/B Testing"
+        - "React / JavaScript"
+        - "Survey Design"
+
+  experience:
+    enable: true
+    items:
+      - company: "University Research Lab"
+        companyUrl: "https://example.com"
+        jobs:
+          - name: "Graduate Research Assistant"
+            date: "Sep 2023 - Present"
+            content: |-
+              Conducting research on human-AI interaction and interface accessibility.
+
+              - Designed and ran user studies (N=40+) evaluating AI-assisted tools for accessibility.
+              - Analyzed qualitative interview data using thematic analysis in Atlas.ti.
+              - Co-authored a paper submitted to CHI 2025.
+
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "Master of Science in Computer Science (HCI Track)"
+        school:
+          name: "Your University Name"
+          url: "https://example.org"
+        date: "2023 - Present"
+        GPA: "4.0 out of 4.0"
+        content: |-
+          Relevant Coursework
+            - Human-Computer Interaction
+            - User Interface Design
+            - Research Methods in HCI
+            - Accessible Computing
+      - title: "Bachelor of Science in Computer Science"
+        school:
+          name: "Your Undergraduate University"
+          url: "https://example.org"
+        date: "2019 - 2023"
+        GPA: "3.9 out of 4.0"
+        content: |-
+          Graduated with honors. Minor in Cognitive Science.
+
+  projects:
+    enable: true
+    items:
+      - title: Accessible AI Writing Assistant
+        content: Designed and evaluated an AI-powered writing tool for users with dyslexia. Conducted think-aloud studies and iterative prototyping with 20 participants.
+        image: /images/projects/project1.jpg
+        badges:
+          - "HCI"
+          - "Accessibility"
+          - "User Study"
+          - "Figma"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yannimei
+
+      - title: Cross-Cultural UX Study
+        content: Investigated how cultural background influences mental models of privacy in social media apps. Mixed-methods study across 3 countries (N=60).
+        image: /images/projects/project2.jpg
+        badges:
+          - "UX Research"
+          - "Privacy"
+          - "Mixed Methods"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yannimei
+
+      - title: Gesture-Based Interface for Older Adults
+        content: Prototyped and tested a gesture-based smart home interface tailored to older adults, focusing on learnability and error recovery.
+        image: /images/projects/project3.jpg
+        badges:
+          - "Older Adults"
+          - "Gesture UI"
+          - "Prototyping"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/yannimei
+
+  contact:
+    enable: true
+    content: I am actively looking for research internship opportunities. Feel free to reach out — I would love to connect!
+    btnName: Email Me
+    btnLink: mailto:yannimei951225@gmail.com
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/yannimei
+      linkedin: https://linkedin.com/in/yannimei
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: false
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
