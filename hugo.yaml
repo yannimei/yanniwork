@@ -86,7 +86,7 @@ params:
         - icon: fab fa-linkedin
           url: https://linkedin.com/in/yannimei
         - icon: fa fa-envelope
-          url: mailto:yannimei951225@gmail.com
+          url: mailto:mei_yanni@163.com
 
   about:
     enable: true
@@ -190,7 +190,7 @@ params:
     enable: true
     content: I am actively looking for research internship opportunities. Feel free to reach out — I would love to connect!
     btnName: Email Me
-    btnLink: mailto:yannimei951225@gmail.com
+    btnLink: mailto:mei_yanni@163.com
 
   footer:
     recentPosts:
