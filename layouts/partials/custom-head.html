@@ -1,0 +1,70 @@
+<style>
+.publications {
+  margin-top: 2.5rem;
+  max-width: 760px;
+}
+
+.publications-title {
+  font-family: 'Fira Mono', monospace;
+  color: #f8f8ff;
+  font-size: 1.4em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #323232;
+}
+
+.paper {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.paper-teaser {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background-color: #323232;
+}
+
+.paper-info {
+  flex: 1;
+}
+
+.paper-title {
+  font-family: 'Fira Mono', monospace;
+  font-size: 1em;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+.paper-title a {
+  color: #80AADD;
+  text-decoration: none;
+}
+
+.paper-title a:hover {
+  text-decoration: underline;
+}
+
+.paper-desc {
+  margin: 0;
+  color: #aaaaaa;
+  font-size: 0.78em;
+  line-height: 1.65;
+  text-align: left;
+}
+
+@media (max-width: 540px) {
+  .paper {
+    flex-direction: column;
+  }
+
+  .paper-teaser {
+    width: 100%;
+    height: 160px;
+  }
+}
+</style>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+
+<head>
+    <title>Art | {{ .Site.Params.author.name }}</title>
+    {{ partial "head.html" . }}
+    <style>
+    .bento-page {
+      width: 100%;
+      padding: 1.5rem 0;
+    }
+
+    .bento-intro {
+      font-size: 0.8em;
+      color: #555555;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .bento-intro a {
+      color: #f97316;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 160px;
+      gap: 12px;
+    }
+
+    .bento-item {
+      border-radius: 14px;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    .bento-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 120px;
+      }
+      .bento-item { grid-column: span 1 !important; grid-row: span 1 !important; }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="flexWrapper">
+        {{ partial "header.html" . }}
+
+        <div class="content vertical" style="width:100%">
+            <main style="width:100%; box-sizing:border-box; padding:0 2rem;">
+                <div class="bento-page">
+                    <p class="bento-intro">I enjoy painting and experimenting with Blender in my spare time. I post my daily practices on my <a href="https://www.instagram.com/ymei_3dimension/" target="_blank">Instagram</a>.</p>
+                    <div class="bento-grid">
+                        {{ range .Params.artworks }}
+                        {{ $imgBase := .image }}
+                        {{ $imgSrc := "" }}
+                        {{ range readDir "static/images/art" }}
+                            {{ $base := .Name | strings.TrimSuffix (path.Ext .Name) }}
+                            {{ if eq (lower $base) (lower $imgBase) }}
+                                {{ $imgSrc = printf "images/art/%s" .Name }}
+                            {{ end }}
+                        {{ end }}
+                        <div class="bento-item">
+                            {{ if $imgSrc }}
+                            <img src="{{ $imgSrc | relURL }}" alt="{{ .title }}">
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        {{ partial "footer.html" . }}
+    </div>
+
+    <script>
+    (function () {
+      var ROW_H = 160;
+      var GAP   = 12;
+      var COLS  = 6;
+
+      function colSpanFor(r) {
+        if (r >= 2.2) return 6;
+        if (r >= 1.6) return 4;
+        if (r >= 1.1) return 3;
+        return 2;
+      }
+
+      function layout() {
+        var grid = document.querySelector('.bento-grid');
+        if (!grid) return;
+        var totalW = grid.getBoundingClientRect().width;
+        if (!totalW) return;
+        var colW = (totalW - (COLS - 1) * GAP) / COLS;
+
+        document.querySelectorAll('.bento-item img').forEach(function (img) {
+          if (!img.naturalWidth) return;
+          var r    = img.naturalWidth / img.naturalHeight;
+          var item = img.closest('.bento-item');
+          var cs   = colSpanFor(r);
+          var cellW  = cs * colW + (cs - 1) * GAP;
+          var idealH = cellW / r;
+          var rs   = Math.max(1, Math.round(idealH / ROW_H));
+          item.style.gridColumn = 'span ' + cs;
+          item.style.gridRow    = 'span ' + rs;
+        });
+      }
+
+      document.querySelectorAll('.bento-item img').forEach(function (img) {
+        img.addEventListener('load', layout);
+      });
+
+      window.addEventListener('load', layout);
+
+      var _rt;
+      window.addEventListener('resize', function () {
+        clearTimeout(_rt);
+        _rt = setTimeout(layout, 100);
+      });
+    })();
+    </script>
+</body>
+
+</html>
