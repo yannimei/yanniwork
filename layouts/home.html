@@ -211,6 +211,20 @@
       background-color: #bbf7d0;
     }
 
+    .pub-more {
+      font-size: 0.82em;
+      color: #777777;
+      text-align: left;
+      margin-top: 0.5rem;
+    }
+
+    .pub-more .paper-link,
+    .pub-more .paper-link:hover,
+    .pub-more .paper-link:visited,
+    .pub-more .paper-link:focus {
+      font-size: 1em;
+    }
+
     @media (max-width: 540px) {
       .paper {
         flex-direction: column;
@@ -275,6 +289,7 @@
                         </div>
                     </div>
                     {{ end }}
+                    <p class="pub-more">For the full publication list please refer to my <a class="paper-link" href="https://scholar.google.com/citations?user=BJJoICkAAAAJ&hl=en" target="_blank"><span class="paper-link-text">Google Scholar</span><span class="paper-link-arrow">→</span></a></p>
                 </div>
                 {{ end }}
             </main>
