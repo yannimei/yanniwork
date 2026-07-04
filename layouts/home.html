@@ -31,7 +31,7 @@
     }
 
     .paper-teaser {
-      width: 220px;
+      width: 280px;
       height: 160px;
       object-fit: cover;
       border-radius: 4px;
@@ -40,8 +40,8 @@
     }
 
     .paper-emoji {
-      width: 220px;
-      height: 160px;
+      width: 300px;
+      height: 200px;
       border-radius: 4px;
       flex-shrink: 0;
       background-color: #ffffff;
@@ -273,10 +273,22 @@
                     <h2 class="publications-title">Selected Publications</h2>
                     {{ range sort $pubs "Params.weight" }}
                     <div class="paper">
-                        {{ if .Params.emoji }}
+                        {{ if .Params.image }}
+                        {{ $imgBase := .Params.image }}
+                        {{ $imgSrc := "" }}
+                        {{ range readDir "static/images/papers" }}
+                            {{ $base := .Name | strings.TrimSuffix (path.Ext .Name) }}
+                            {{ if eq (lower $base) (lower $imgBase) }}
+                                {{ $imgSrc = printf "images/papers/%s" .Name }}
+                            {{ end }}
+                        {{ end }}
+                        {{ if $imgSrc }}
+                        <img class="paper-teaser" src="{{ $imgSrc | relURL }}" alt="{{ .Title }} teaser">
+                        {{ else }}
                         <div class="paper-emoji">{{ .Params.emoji }}</div>
-                        {{ else if .Params.image }}
-                        <img class="paper-teaser" src="{{ .Params.image | relURL }}" alt="{{ .Title }} teaser">
+                        {{ end }}
+                        {{ else if .Params.emoji }}
+                        <div class="paper-emoji">{{ .Params.emoji }}</div>
                         {{ end }}
                         <div class="paper-info">
                             <h3 class="paper-title"><a href="{{ .Params.link }}">{{ .Title }}</a></h3>

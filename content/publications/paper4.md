@@ -1,7 +1,7 @@
 ---
 title: "CakeVR: A Social Virtual Reality (VR) Tool for Co-designing Cakes"
 link: "https://doi.org/10.1145/3411764.3445503"
-emoji: "💬"
+image: "paper4"
 weight: 4
 venue: "CHI'21"
 authors: "Yanni Mei, Jie Li, Huib de Ridder, Pablo Cesar"

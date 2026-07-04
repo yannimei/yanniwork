@@ -1,7 +1,7 @@
 ---
 title: "Embodied Spatial Simulation: Enabling Embodied Interaction with Human Motion Simulation in Extended Reality"
 link: "https://ieeexplore.ieee.org/document/11471288"
-emoji: "🏃‍♀️‍➡️"
+image: "paper1"
 weight: 1
 venue: "TVCG'26"
 authors: "Yanni Mei, Jonas Wombacher, Wen-Jie Tseng, Veronika Krauß, Jan Gugenheimer"

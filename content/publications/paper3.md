@@ -1,7 +1,7 @@
 ---
 title: "ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality"
 link: "https://github.com/yannimei"
-emoji: "🔎"
+image: "paper3"
 weight: 3
 venue: "Under Submission"
 authors: "Yanni Mei, Samuel Wendt, Jonas Wombacher, Florian Müller, Jan Gugenheimer"

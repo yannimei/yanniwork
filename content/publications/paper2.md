@@ -1,7 +1,7 @@
 ---
 title: "Meme, Myself and AR: Exploring Memes Sharing in Face-to-face Conversation using Augmented Reality"
 link: "https://dl.acm.org/doi/full/10.1145/3772318.3791255"
-emoji: "💬"
+image: "paper2"
 weight: 2
 venue: "CHI'26"
 authors: "Yanni Mei, Samuel Wendt, Florian Müller, Jan Gugenheimer"
