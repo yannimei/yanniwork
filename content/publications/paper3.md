@@ -2,7 +2,7 @@
 title: "ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality"
 link: "https://github.com/yannimei"
 image: "paper3"
-weight: 3
+weight: 1
 venue: "Under Submission"
 authors: "Yanni Mei, Samuel Wendt, Jonas Wombacher, Florian Müller, Jan Gugenheimer"
 abstract: "An AR system that allows users to verbalize expected **visual augmentations** for changing their vision in real time using LLM-aided **shader generation**."
