@@ -22,7 +22,7 @@ params:
   hostname: "yannimei.github.io"
   openLinksInNewTab: true
   displayDateFormat: "Jan 2, 2006"
-  sitedescription: "HCI Researcher | MS Student | Seeking Research Internship"
+  sitedescription: ""
 
   showMetadata: true
   showPublishedDate: true
