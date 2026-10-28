@@ -7,8 +7,8 @@ venue: "Under Submission"
 authors: "Yanni Mei, Samuel Wendt, Jonas Wombacher, Florian Müller, Jan Gugenheimer"
 abstract: "An AR system that allows users to verbalize expected **visual augmentations** for changing their vision in real time using LLM-aided **shader generation**."
 links:
-  - name: "Demonstration"
-    url: "https://dl.acm.org/doi/full/10.1145/3772363.3799378"
+  - name: "Preprint"
+    url: "https://arxiv.org/abs/2610.19998"
   - name: "Video"
     url: "https://youtu.be/wVubLpjxoq8"
 ---
